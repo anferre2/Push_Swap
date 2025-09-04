@@ -1,85 +1,73 @@
-push_swap
+# push_swap
 
-📌 Overview
+The **push_swap** project is a sorting algorithm challenge from 42 School.  
+The goal is to sort a stack of integers using only a limited set of operations on two stacks (`a` and `b`).
 
-The push_swap project is a sorting algorithm challenge from 42 school.
-The goal is to sort a stack of integers with the smallest number of operations, using only a limited set of stack instructions.
+---
 
-The project consists of two programs:
+## 🚀 Project Overview
 
-push_swap → takes a list of integers as arguments and prints the sequence of operations needed to sort them.
+- **Input:** A list of integers (possibly unsorted).
+- **Goal:** Sort the list in ascending order with the minimum number of operations.
+- **Stacks:**
+  - `a`: contains the input numbers.
+  - `b`: initially empty, used for temporary storage.
 
-checker (optional bonus) → takes the same list and a sequence of operations as input, then checks if the result is sorted.
+---
 
-⚙️ Allowed operations
+## 📋 Allowed Operations
 
-sa / sb : swap the first two elements of stack A or B
+- **Swap:**
+  - `sa`: swap the first 2 elements of stack a.
+  - `sb`: swap the first 2 elements of stack b.
+  - `ss`: `sa` and `sb` at the same time.
 
-ss : sa and sb at the same time
+- **Push:**
+  - `pa`: push the first element of b onto a.
+  - `pb`: push the first element of a onto b.
 
-pa : push the first element of B onto A
+- **Rotate:**
+  - `ra`: shift all elements of a up by 1.
+  - `rb`: shift all elements of b up by 1.
+  - `rr`: `ra` and `rb` at the same time.
 
-pb : push the first element of A onto B
+- **Reverse Rotate:**
+  - `rra`: shift all elements of a down by 1.
+  - `rrb`: shift all elements of b down by 1.
+  - `rrr`: `rra` and `rrb` at the same time.
 
-ra / rb : rotate stack A or B upwards
+---
 
-rr : ra and rb at the same time
+## 🧠 Approach
 
-rra / rrb : reverse rotate stack A or B
+- Small stacks (≤ 5 elements):  
+  - Hardcoded efficient sorting with minimal moves.
+- Large stacks:  
+  - **Radix sort** (bitwise approach) for efficiency.  
+  - Other strategies may include chunking or splitting into smaller ranges.
 
-rrr : rra and rrb at the same time
+---
 
-🚀 Usage
-Compile
+## 🛠️ Compilation
+
+```bash
 make
-
-This will create the push_swap executable.
-Run
-
-./push_swap 4 67 3 87 23
-
-Example output:
-
+▶️ Usage
+Example
+./push_swap 2 1 3 6 5 8
+Output (sequence of operations):
+sa
+pb
 pb
 ra
-pb
-sa
 pa
 pa
+✅ Testing
 
-🧠 Project Goals
-
-    Learn and implement efficient sorting algorithms
-
-    Optimize for the smallest number of moves
-
-    Work with stacks, linked lists, and algorithms
-
-    Manage complexity and big input cases
-
-📊 Performance
-
-    Sort 3 numbers in ≤ 3 moves
-
-    Sort 5 numbers in ≤ 12 moves
-
-    For 100 numbers, expect < 700 moves
-
-    For 500 numbers, expect < 5500 moves
-
-(The actual performance depends on your algorithm.)
-🛠️ Implementation details
-
-    Input validation (duplicates, non-numeric values, out-of-int-range)
-
-    Parsing arguments and initializing stacks
-
-    Core sorting algorithm (usually radix sort, chunking, or a mix of strategies)
-
-    Outputting the minimal sequence of operations
-
+You can combine push_swap with the checker program provided by 42:
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
+If the output sequence sorts the stack → OK
+Otherwise → KO
 👨‍💻 Author
 
-Project developed as part of the 42 School curriculum.
-
-Author: André Lima
+André Ferreira (anferre2)
