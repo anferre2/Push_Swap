@@ -15,6 +15,43 @@ The goal is to sort a stack of integers using only a limited set of operations o
 
 ---
 
+## 🧠 Project Goals
+
+- Learn and implement efficient sorting algorithms  
+- Optimize for the smallest number of moves  
+- Work with stacks, linked lists, and algorithms  
+- Manage complexity and big input cases  
+
+---
+
+## 📊 Performance
+
+- Sort **3 numbers** → ≤ 3 moves  
+- Sort **5 numbers** → ≤ 12 moves  
+- For **100 numbers** → < 700 moves  
+- For **500 numbers** → < 5500 moves  
+
+*(The actual performance depends on your algorithm.)*
+
+---
+
+## 🛠️ Implementation Details
+
+- ✅ Input validation:
+  - Duplicates  
+  - Non-numeric values  
+  - Out-of-int-range numbers  
+
+- ✅ Parsing arguments and initializing stacks  
+
+- ✅ Core sorting algorithm:
+  - Radix sort  
+  - Chunking  
+  - Or a mix of strategies  
+
+- ✅ Outputting the minimal sequence of operations  
+
+
 ## 📋 Allowed Operations
 
 - **Swap:**
