@@ -72,8 +72,11 @@ pa
 ✅ Testing
 
 You can combine push_swap with the checker program provided by 42:
+
 `ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG`
+
 If the output sequence sorts the stack → OK
+
 Otherwise → KO
 
 👨‍💻 Author
