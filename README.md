@@ -53,9 +53,13 @@ The goal is to sort a stack of integers using only a limited set of operations o
 
 `make`
 ▶️ Usage
+
 Example
+
 `./push_swap 2 1 3 6 5 8`
+
 Output (sequence of operations):
+
 ```
 sa
 pb
@@ -64,6 +68,7 @@ ra
 pa
 pa
 ```
+
 ✅ Testing
 
 You can combine push_swap with the checker program provided by 42:
@@ -72,4 +77,5 @@ If the output sequence sorts the stack → OK
 Otherwise → KO
 
 👨‍💻 Author
+
 André Ferreira (anferre2)
