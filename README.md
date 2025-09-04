@@ -50,24 +50,26 @@ The goal is to sort a stack of integers using only a limited set of operations o
 
 ## 🛠️ Compilation
 
-```bash
-make
+
+`make`
 ▶️ Usage
 Example
-./push_swap 2 1 3 6 5 8
+`./push_swap 2 1 3 6 5 8`
 Output (sequence of operations):
+```
 sa
 pb
 pb
 ra
 pa
 pa
+```
 ✅ Testing
 
 You can combine push_swap with the checker program provided by 42:
-ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
+`ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG`
 If the output sequence sorts the stack → OK
 Otherwise → KO
-👨‍💻 Author
 
+👨‍💻 Author
 André Ferreira (anferre2)
